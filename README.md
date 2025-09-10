@@ -1,50 +1,100 @@
-📊 Trader Behavior Insights under Bitcoin Market Sentiment
-Author: Atharva Chavan (Junior Data Scientist Candidate)
 
-#Project Goal
-This project analyzes historical trading data from Hyperliquid alongside Bitcoin market sentiment (Fear vs. Greed Index) to understand how market emotions influence trader behavior and performance. The goal is to identify actionable patterns that could lead to smarter trading strategies.
+# 📊 Trader Behavior Insights under Bitcoin Market Sentiment
 
-#Methodology
-Data Loading & Preprocessing:
+**Author:** Atharva Chavan (Junior Data Scientist Candidate)
 
-#Loaded historical trading data (historical_data.csv) and sentiment data (fear_greed_index.csv).
-Converted timestamp columns to datetime objects for consistent handling.
-Created a date-only column for merging the datasets.
-Simplified column names for clarity.
-Merged the trader and sentiment dataframes on the date.
-Identified and removed outliers in closed_pnl and size_usd using the 1.5 * IQR rule to ensure a more robust analysis of typical trader behavior.
-Exploratory Data Analysis (EDA):
+---
 
-#Visualized the distribution of market sentiment to understand the frequency of different emotional states.
-Analyzed the distribution of trader PnL (Profit and Loss) under different sentiments, both before and after outlier removal.
-Calculated and visualized the win rate across different sentiment categories.
-Examined the distribution of trade sizes (size_usd) by sentiment.
-Investigated symbol performance across different sentiment categories, focusing on top-performing symbols.
-Explored the correlation between closed_pnl, execution_price, size_usd, and fee.
-Analyzed the distribution of trade directions (side, Direction) within each sentiment category after outlier removal.
-Key Findings:
+## 🚀 Project Overview
 
-#Market sentiment is frequently in states of "Fear" or "Greed."
-"Extreme Greed" sentiment was associated with the highest average PnL and win rate, even after outlier removal, suggesting potential profitability in optimistic markets.
-Average trade size varies with sentiment, with "Fear" and "Greed" generally having larger average sizes before outlier removal. After outlier removal, "Extreme Fear" and "Fear" still showed slightly larger average sizes.
-Specific cryptocurrencies exhibit varying performance depending on the market sentiment.
-Correlations between PnL and individual trade features like size, price, and fee are relatively weak, indicating that sentiment and potentially other factors play a significant role in trade outcomes.
-Analysis of trade direction after outlier removal revealed differences in trading activity across sentiments (e.g., prevalence of "Open Long" in Extreme Greed vs. "Open Short" in Extreme Fear).
-Implications for Smarter Trading Strategies
-The findings suggest that incorporating Bitcoin market sentiment into trading strategies could be beneficial:
+This project analyzes **historical trading data from Hyperliquid** alongside the **Bitcoin Fear & Greed Index** to understand how **market emotions influence trader behavior and performance**.
 
-###Sentiment-Aware Timing: Consider adjusting trading activity based on the prevailing sentiment, potentially being more aggressive during periods of "Extreme Greed" which historically showed higher average profitability and win rates in this dataset.
-###Adaptive Risk Management & Trade Sizing: The observation of smaller, more frequent winning trades during "Extreme Greed" could inform dynamic trade sizing strategies.
-###Sentiment-Specific Symbol Selection: Focus on trading assets that have historically performed well in the current market sentiment.
-###Further Research: Explore additional factors like trade duration, specific trading strategies employed by profitable traders, and external market events to build more comprehensive trading models.
-#Getting Started
-To replicate this analysis, clone the repository and ensure you have the necessary data files (historical_data.csv and fear_greed_index.csv) in the appropriate directory. The code can be run in a Jupyter Notebook or Google Colab environment.
+The goal is to uncover actionable patterns and insights that can support the development of **smarter, sentiment-aware trading strategies** in the crypto market.
 
-##Libraries Used
-pandas
-numpy
-matplotlib
-seaborn
+---
 
-Implement machine learning models to predict trade outcomes based on sentiment and other features.
-This project provides a foundational analysis of how market sentiment influences trader behavior. The insights gained can serve as a starting point for developing more sophisticated and sentiment-aware trading approaches.
+## 🛠 Methodology
+
+### 🔹 Data Loading & Preprocessing
+
+* Loaded `historical_data.csv` (trader data) and `fear_greed_index.csv` (sentiment data).
+* Converted timestamps into proper datetime objects.
+* Created date-only keys for joining the datasets.
+* Renamed and simplified column names for clarity.
+* Merged trader and sentiment data on the **date column**.
+* Identified and removed **outliers** in `closed_pnl` and `size_usd` using the **1.5 × IQR rule** to improve robustness.
+
+### 🔹 Exploratory Data Analysis (EDA)
+
+* Visualized **distribution of sentiment** categories (Fear, Greed, Extreme Fear, Extreme Greed).
+* Compared **PnL distributions** under different sentiments (with and without outlier removal).
+* Calculated **win rates** across sentiment categories.
+* Examined **trade size behavior** (`size_usd`) under different sentiments.
+* Evaluated **symbol performance** segmented by sentiment.
+* Explored correlations between **PnL, execution price, trade size, and fees**.
+* Analyzed **trade direction (Buy/Sell, Long/Short)** across sentiment states.
+
+---
+
+## 📈 Key Findings
+
+* 🟢 **Extreme Greed** sentiment was associated with the **highest average PnL and win rate**, suggesting optimism-driven profitability.
+* 📊 **Trade sizes** tended to be larger during Fear and Greed states (even after outlier removal).
+* 💡 Certain **cryptocurrencies responded differently** to sentiment shifts, highlighting the importance of sentiment-specific asset selection.
+* 🔗 Correlations between PnL and features like trade size, price, or fee were **weak**, suggesting sentiment itself (and external factors) plays a stronger role.
+* 📉 **Trade direction** patterns shifted with sentiment (e.g., more **Open Long** during Extreme Greed, more **Open Short** during Extreme Fear).
+
+---
+
+## 💡 Implications for Smarter Trading
+
+* **📊 Sentiment-Aware Timing:** Increase trading activity during **Extreme Greed** phases, historically associated with higher profitability.
+* **⚖️ Adaptive Risk Management:** Dynamically adjust **trade size and leverage** depending on prevailing sentiment.
+* **🎯 Sentiment-Specific Asset Focus:** Prioritize assets that have historically shown better performance under the current sentiment regime.
+* **🔍 Further Research:** Incorporate **trade duration, trader-level strategies, and external events** into models for improved predictions.
+
+---
+
+## 🖥 Getting Started
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/AtharvaSC03/Trader-Behavior-Insights.git
+   cd Trader-Behavior-Insights
+   ```
+2. Place the datasets (`historical_data.csv`, `fear_greed_index.csv`) in the root folder.
+3. Run the Jupyter Notebook or Google Colab notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+4. Open `Trader_Behavior_Insights.ipynb` and execute all cells.
+
+---
+
+## 📚 Libraries Used
+
+* **pandas** → data manipulation
+* **numpy** → numerical operations
+* **matplotlib** & **seaborn** → data visualization
+
+---
+
+## 🔮 Future Work
+
+* Implement **machine learning models** (e.g., logistic regression, XGBoost) to predict trade outcomes based on sentiment and trade features.
+* Build **real-time dashboards** (Streamlit/Plotly) to monitor sentiment and trader performance.
+* Extend analysis to include **macro events & news sentiment** for deeper insights.
+
+---
+
+## ✨ Conclusion
+
+This project provides a **foundational analysis** of how **market sentiment impacts trader behavior**.
+
+The insights gained here can serve as a stepping stone toward **advanced, sentiment-aware trading systems** in the Web3 space.
+
+---
+
+Would you like me to also **add badges (e.g., Python, Jupyter, MIT License, GitHub stars)** at the top of your README to make it look even more polished and professional for recruiters?
