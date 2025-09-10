@@ -12,6 +12,12 @@ This project analyzes **historical trading data from Hyperliquid** alongside the
 The goal is to uncover actionable patterns and insights that can support the development of **smarter, sentiment-aware trading strategies** in the crypto market.
 
 ---
+## Link to dataset
+Historical Data 
+https://drive.google.com/file/d/1IAfLZwu6rJzyWKgBToqwSmmVYU6VbjVs/view?usp=sharing
+
+Fear Greed Index link:
+https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view?usp=sharing
 
 ## 🛠 Methodology
 
