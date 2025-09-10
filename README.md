@@ -15,9 +15,11 @@ The goal is to uncover actionable patterns and insights that can support the dev
 ## Link to dataset
 Historical Data 
 https://drive.google.com/file/d/1IAfLZwu6rJzyWKgBToqwSmmVYU6VbjVs/view?usp=sharing
+<img width="987" height="659" alt="image" src="https://github.com/user-attachments/assets/d9eb1781-40d1-41cd-8021-ae131a3e8456" />
 
 Fear Greed Index link:
 https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view?usp=sharing
+<img width="1105" height="230" alt="image" src="https://github.com/user-attachments/assets/bfec7079-96f0-42cc-ac99-a0fa5237e501" />
 
 ## 🛠 Methodology
 
